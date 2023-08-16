@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  /* Primary Colors */
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 100%, 49%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Styling Starts from here */
+
+main {
+  max-width: 1440px;
+  min-height: 800px;
+  background-color: var(--Violet);
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1440px;
+  min-height: 800px;
+  background-image: url("images/bg-desktop.svg");
+  padding: 2rem 5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  place-items: center;
+  margin-top: 4rem;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heading-primary {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.main-content {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.767);
+  text-align: justify;
+}
+
+.btn {
+  margin-top: 1.5rem;
+  max-width: 200px;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--Soft-Magenta);
+  color: white;
+}
+
+.register {
+  color: var(--Violet);
+}
+
+.social-media-section {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  justify-content: flex-end;
+}
+
+.social-icon {
+  border: 1px solid white;
+  padding: 0.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}
+
+/* Mobile Device */
+
+@media (max-width: 400px) {
+  .container {
+    padding: 2rem;
+    background-image: url("images/bg-mobile.svg");
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  .hero-img {
+    max-width: 100%;
+  }
+
+  .heading-primary {
+    font-size: 1.7rem;
+  }
+
+  .main-content {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+  }
+
+  .social-media-section {
+    justify-content: center;
+  }
+}
